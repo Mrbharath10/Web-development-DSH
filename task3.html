@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced University Course Registration Portal</title>
+
+    <style>
+
+        body {
+            background-color: #eaf0f8;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            background-color: #1d385d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        header p {
+            color: #dce6f5;
+        }
+
+        fieldset {
+            background-color: white;
+            border: 1px solid #b5c5d8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #1d385d;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #1d385d;
+            color: white;
+        }
+
+        td, th {
+            padding: 10px;
+        }
+
+        input, select, textarea {
+            padding: 7px;
+        }
+
+        button {
+            background-color: #1d385d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #1d385d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <center>
+
+        <header>
+            <h1>Advanced University Course Registration Portal</h1>
+            <p><em>Pure Semantic HTML Structure Without External Style Sheets</em></p>
+        </header>
+
+        <br>
+
+        <form action="#" method="post">
+
+            <fieldset>
+
+                <legend>1. Student Biological & Identification Profiles</legend>
+
+                <table border="1">
+
+                    <thead>
+                        <tr>
+                            <th colspan="2">Personal Attributes</th>
+                            <th colspan="2">Legal Identification Verification</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="fullname">Full Legal Name:</label><br>
+                                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                            </td>
+
+                            <td>
+                                <label for="dob">Date of Birth:</label><br>
+                                <input type="date" id="dob" name="dob" required>
+                            </td>
+
+                            <td>
+                                <label for="idcard">National ID Card / Passport:</label><br>
+                                <input type="file" id="idcard" name="idcard">
+                            </td>
+
+                            <td>
+                                <label for="residency">Residency Classification:</label><br>
+                                <select id="residency" name="residency">
+                                    <option value="in-state">In-State Resident</option>
+                                    <option value="out-of-state">Out-of-State Resident</option>
+                                    <option value="international">International Student</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>2. Academic Course Matrix & Prerequisites Selection</legend>
+
+                <p>Select your major track and check the corresponding specialized laboratory electives:</p>
+
+                <table border="1">
+
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Department Track</th>
+                            <th rowspan="2">Core Lecture Modules</th>
+                            <th colspan="3">Laboratory Elective Segments</th>
+                        </tr>
+
+                        <tr>
+                            <th>Session Alpha</th>
+                            <th>Session Beta</th>
+                            <th>Session Gamma</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <th rowspan="2">Computer Science Engineering</th>
+
+                            <td>Advanced Quantum Computing (CS-801)</td>
+
+                            <td>
+                                <input type="checkbox" name="cs801_alpha" value="morning">
+                                Morning Slot
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="cs801_beta" value="full" disabled>
+                                [Full]
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="cs801_gamma" value="night">
+                                Night Slot
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Neural Network Topologies (CS-802)</td>
+
+                            <td>
+                                <input type="checkbox" name="cs802_alpha" value="morning">
+                                Morning Slot
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="cs802_beta" value="evening">
+                                Evening Slot
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="cs802_gamma" value="night">
+                                Night Slot
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Bio-Medical Sciences</th>
+
+                            <td>Genomic Sequencing Protocols (BM-704)</td>
+
+                            <td colspan="2">
+                                <input type="radio" name="bm704" value="double-block">
+                                Intensive Combined Double-Block (Alpha + Beta)
+                            </td>
+
+                            <td>
+                                <input type="radio" name="bm704" value="gamma">
+                                Standard Gamma
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>3. Auxiliary Declarations & Thresholds</legend>
+
+                <p>
+                    <label for="campus">Preferred Primary Campus Node:</label><br>
+
+                    <input type="text" id="campus" name="campus" list="campus-list" placeholder="Type to search...">
+
+                    <datalist id="campus-list">
+                        <option value="North Campus">
+                        <option value="South Campus">
+                        <option value="East Campus">
+                        <option value="West Campus">
+                        <option value="Online / Remote Node">
+                    </datalist>
+                </p>
+
+                <p>
+                    <label for="credits">Desired Credit Limit Cap per Semester:</label><br>
+
+                    <input type="number" id="credits" name="credits" min="12" max="24" step="2" value="18">
+
+                    (Range Allowed: 12 to 24 credits in increments of 2)
+                </p>
+
+                <p>
+                    <label for="purpose">Statement of Purpose / Research Intent:</label><br>
+
+                    <textarea id="purpose" name="purpose" rows="5" cols="45" maxlength="500" placeholder="Describe your academic pursuits in under 500 characters..."></textarea>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            <button type="reset">Wipe Data & Reset Form Template</button>
+
+            <button type="submit">Authorize & Process Institutional Enrollment</button>
+
+        </form>
+
+        <br>
+
+        <footer>
+            <p>© 2026 Academic Registry System Layer. All Tags Executed Natively.</p>
+        </footer>
+
+    </center>
+
+</body>
+</html>

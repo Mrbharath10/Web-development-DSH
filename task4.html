@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDI Partner Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+            color: black;
+            margin: 20px;
+        }
+
+        .header {
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        .header h1 {
+            display: inline;
+        }
+
+        .menu {
+            float: right;
+        }
+
+        .menu a{
+            color: black;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .section {
+            margin-top: 25px;
+        }
+
+        .card {
+            border: 1px solid black;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: 18%;
+        }
+
+        button {
+            background-color: white;
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        input, select {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eeeeee;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 15px;
+            margin-top: 15px;
+            display: inline-block;
+            width: 43%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>EDI Dashboard</h1>
+
+        <div class="menu">
+            <a href="#">Dashboard</a>
+            <a href="#">Partners</a>
+            <a href="#">Reports</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Partner Integration Dashboard</h2>
+        <p>Monitor your EDI transactions and partner activities.</p>
+        <button>Back to Integration</button>
+    </div>
+
+    <div class="section">
+        <h3>Transaction Overview</h3>
+
+        <button>All Transactions</button>
+        <button>Inbound</button>
+        <button>Outbound</button>
+
+        <br><br>
+
+        <input type="text" placeholder="Search transactions">
+
+        <select>
+            <option>All Partners</option>
+            <option>Partner A</option>
+            <option>Partner B</option>
+        </select>
+
+        <select>
+            <option>All Dates</option>
+            <option>Today</option>
+            <option>This Week</option>
+        </select>
+
+        <button>Refresh</button>
+    </div>
+
+    <div class="section">
+        <div class="card">
+            <h3>20,573</h3>
+            <p>Total Transactions</p>
+        </div>
+
+        <div class="card">
+            <h3>93.3%</h3>
+            <p>Success Rate</p>
+        </div>
+
+        <div class="card">
+            <h3>1,364</h3>
+            <p>Failed Transactions</p>
+        </div>
+
+        <div class="card">
+            <h3>6.6%</h3>
+            <p>Retry Rate</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Transaction Details</h3>
+
+        <div class="box">
+            <h3>Inbound Transactions</h3>
+            <p>Total: 10,250</p>
+            <p>EDI 850 - Purchase Order</p>
+            <p>EDI 810 - Invoice</p>
+            <p>EDI 856 - Shipping Notice</p>
+        </div>
+
+        <div class="box">
+            <h3>Outbound Transactions</h3>
+            <p>Total: 10,323</p>
+            <p>EDI 850 - Purchase Order</p>
+            <p>EDI 810 - Invoice</p>
+            <p>EDI 856 - Shipping Notice</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Acknowledgements</h3>
+
+        <div class="box">
+            <h3>Inbound Acknowledgements</h3>
+            <p>Received: 5,200</p>
+            <p>Accepted: 4,900</p>
+            <p>Rejected: 300</p>
+        </div>
+
+        <div class="box">
+            <h3>Outbound Acknowledgements</h3>
+            <p>Sent: 5,100</p>
+            <p>Accepted: 4,800</p>
+            <p>Pending: 300</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Documents Exchanged</h3>
+
+        <table>
+            <tr>
+                <th>Document</th>
+                <th>Description</th>
+                <th>Count</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>EDI 850</td>
+                <td>Purchase Order</td>
+                <td>5,000</td>
+                <td>Success</td>
+            </tr>
+
+            <tr>
+                <td>EDI 810</td>
+                <td>Invoice</td>
+                <td>4,500</td>
+                <td>Success</td>
+            </tr>
+
+            <tr>
+                <td>EDI 856</td>
+                <td>Shipping Notice</td>
+                <td>3,200</td>
+                <td>Failed</td>
+            </tr>
+
+            <tr>
+                <td>EDI 997</td>
+                <td>Acknowledgement</td>
+                <td>2,800</td>
+                <td>Success</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h3>Top Failure Reasons</h3>
+
+        <p>1. Invalid Document Format</p>
+        <p>2. Missing Required Information</p>
+        <p>3. Partner Connection Error</p>
+        <p>4. Invalid Document Number</p>
+    </div>
+
+</body>
+</html>
