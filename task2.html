@@ -4,73 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: rgb(78, 108, 148);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: rgb(199, 182, 182);
+            padding: 25px;
+            border: 2px solid #333;
+            border-radius: 6px;
+            width: 480px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <table border="1">
+
     <h2>Student Registration Form</h2>
-    
-    <form>
-        <div>
-            <label for="name">Student Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        </div><br>
 
-        <div>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div><br>
+    <div class="form-container">
+        <form>
+            <table>
+                <tr>
+                    <td>Student Name:</td>
+                    <td><input type="text" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" placeholder="Enter password"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" placeholder="Enter phone number"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Department:</td>
+                    <td>
+                        <select>
+                            <option>Select Department</option>
+                            <option>CSE</option>
+                            <option>ECE</option>
+                            <option>EEE</option>
+                            <option>Mech</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea rows="3" placeholder="Enter your address"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="terms"> <label for="terms">I agree to the terms and conditions.</label>
+                    </td>
+                </tr>
+            </table>
 
-        <div>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="Enter password" required>
-        </div><br>
-
-        <div>
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
-        </div><br>
-
-        <div>
-            <label for="dob">Date of Birth:</label><br>
-            <input type="date" id="dob" name="dob">
-        </div><br>
-
-        <div>
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-        </div><br>
-
-        <div>
-            <label for="department">Department:</label><br>
-            <select id="department" name="department">
-                <option value="">Select Department</option>
-                <option value="cs">Computer Science</option>
-                <option value="ee">Electrical Engineering</option>
-                <option value="me">Mechanical Engineering</option>
-                <option value="ba">Business Administration</option>
-            </select>
-        </div><br>
-        <div>
-            <label for="address">Address:</label><br>
-            <textarea id="address" name="address" rows="4" cols="30" placeholder="Enter your address"></textarea>
-        </div><br>
-
-        <div>
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the terms and conditions.</label>
-        </div><br>
-
-        <div>
-            <button type="submit">Register</button>
-            <button type="reset">Clear</button>
-        </div>
-        </table>
-    </form>
-</center>
+            <div class="buttons">
+                <button type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
